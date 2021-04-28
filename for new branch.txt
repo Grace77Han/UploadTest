@@ -1,0 +1,1 @@
+This txt will be in anotherBranch but not be in master.
