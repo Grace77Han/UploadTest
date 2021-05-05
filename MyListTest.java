@@ -1,7 +1,7 @@
 import java.util.ArrayList; 
 public class MyListTest {
 	
-	public static void main(String[] args) {
+	public static <T> void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		//1. write some code to use MyList 
@@ -10,6 +10,35 @@ public class MyListTest {
 	//	ArrayList<String> sampleData = new ArrayList<>(); //  A ,
 		ArrayList<String> sampleData = new ArrayList<String>(); // B, What is different between A and B?
 	// Ans: Is there a difference between A and B? As I know, they work same. Could you let me know the certain difference? 
+		
+		
+		/**
+		 * ArrayList
+		 * Both of sampleData instance variables have Generic ArrayList.
+		 * java.util Class ArrayList<E>  -->E represents Element Type
+		 * Resizable-array implementation of the List interface.
+		 *  Implements all optional list operations, and permits all elements, including null. In addition to implementing the List interface,
+		 *  this class provides methods to manipulate the size of the array that is used internally to store the list.
+		 * 
+		 * https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html (<---- look at this and try to remember...)
+		 * 
+		 * 
+		 * Example1>
+		 * List names = new ArrayList();
+		 * names.add("grace");
+		 * 
+		 * Example2>
+		 * List<String> names2 = new ArrayList();
+		 * name2.add("grace");
+		 * 
+		 * Example1 and Example2 have big different. what is it?
+		 * 
+		 * 
+		 * Compiler does not recognize the missing E in case A due to String type infront of sampleData variable.
+		 * 
+		 */
+		
+		
 		
 	//	String[] sampleData = {"aa","bb","cc","cc"};  //C, what if you are using straing array, what happen?  why do you need ArrayList?
 	/* Ans: I don't think there will be a big difference between using String array and ArrayList. 
@@ -21,12 +50,27 @@ public class MyListTest {
 		sampleData.add("cc");
 		sampleData.add("cc");
 		
+		/*
+		 * Can you reduce addition action? 
+		 * Also, can you store string and number within the object?
+		 * 
+		 * 
+		 * 
+		 */
+		
 	
 		MyList myList = new MyList();
 		MySet mySet = new MySet();
 		
 		// copy all values of the sampleData arraylist into myList
 		// same data will be added as arraylist
+		
+		/*
+		 *  Can you use another way for data iteration? not for loop
+		 *  
+		 *  
+		 */
+
 		for (int i = 0; i < sampleData.size(); i++) { // test add
 			myList.add(sampleData.get(i));
 		}
