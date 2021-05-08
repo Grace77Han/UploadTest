@@ -32,29 +32,48 @@ public class MyListTest {
 		 * name2.add("grace");
 		 * 
 		 * Example1 and Example2 have big different. what is it?
-		 * 
-		 * 
+		 * Ans: Ex1 is not a generic but Ex2 is a generic.
+		 *   names contains "grace", and it can contain other data types too. However, when this raw(?) type is in use, 
+		 *    the programmer should pay a lot of attention to type casting since the data types of elements won't be checked during compilation time.   
+		 *   names2 also contains "grace", and it only can contain String as the generic specified the data type. When elements with other data types 
+		 *    are added in names2, the added elements' data types will automatically be converted to String. 
+		 *
 		 * Compiler does not recognize the missing E in case A due to String type infront of sampleData variable.
-		 * 
-		 */
-		
-		
+		 * Q: To sum up... B is the standard way of allocating a generic arraylist, 
+		 *   but using A also works same as B without generating a compile error. <---- Did I understand the concept properly?  
+		 *   
+		 *
+		 */	
 		
 	//	String[] sampleData = {"aa","bb","cc","cc"};  //C, what if you are using straing array, what happen?  why do you need ArrayList?
 	/* Ans: I don't think there will be a big difference between using String array and ArrayList. 
 	    String array won't have some methods like add(), remove(), get() that ArrayList will has, so I need to write more codes. 
 		Also String array will have a fixed size while ArrayList has size flexibility.
 	*/	
+		/*
 		sampleData.add("aa");
 		sampleData.add("bb");
 		sampleData.add("cc");
 		sampleData.add("cc");
-		
+		*/
+
 		/*
 		 * Can you reduce addition action? 
+		 * Ans: If you meant reducing repeated lines, 
+		 *   I can make an array which contains elements and put the elements in the ArrayList in a for loop.
+		 */
+
+		 String[] elementArr = {"aa", "bb", "cc", "dd"};
+		 for (int i = 0 ; i < elementArr.length() ; i++ ){
+			 sampleData.add(elementArr[i]);
+		 }
+
+
+
+		 /** 
 		 * Also, can you store string and number within the object?
-		 * 
-		 * 
+		 * Ans:  Since sampleData arraylist is declared as String generic, it will contain String elements.  
+		 *   If a number element is added, the number's type will become String. (It could be wrong since I'm not really sure about generics.)
 		 * 
 		 */
 		
@@ -67,13 +86,21 @@ public class MyListTest {
 		
 		/*
 		 *  Can you use another way for data iteration? not for loop
-		 *  
+		 *  Ans: I can use while loop.
 		 *  
 		 */
 
+		int index = 0;
+		while (index < sampleData.size()) {
+			myList.add(sampleData.get(index));
+			index++;
+		}
+
+		/* 
 		for (int i = 0; i < sampleData.size(); i++) { // test add
 			myList.add(sampleData.get(i));
 		}
+		*/
 		
 		// copy values of the sampleData arraylist into mySet
 		// same data will be added as arraylist except 4th element "cc" 
