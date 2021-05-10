@@ -5,3 +5,4 @@
 
 https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
 
+![image](https://user-images.githubusercontent.com/76067750/117606062-15a66780-b127-11eb-98a0-871621db338d.png)
