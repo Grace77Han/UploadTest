@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator; 
 
 public class ArrayListExample {
 
@@ -16,13 +17,15 @@ public class ArrayListExample {
 	    };
 
 	    //Store the sampledata into the ArrayList
+		for (int i = 0 ; i < chilDrivingSampleData.length ; i++ ){
+			 chilDrivingData.add(chilDrivingSampleData[i]);
+		 }
 	    
-	    
-	    
-	    // iterating all elements from the ArrayList
+	    // iterating all elements from the ArrayList // I don't understand the exact meaning of iterating in this context. Do you want me to print all elements?
 	    // use Iterator
-	    // use Enumeration and Collections
-	    
+		Iterator<String> chilDrivingDataIterator = chilDrivingData.iterator();
+
+	    // use Enumeration and Collections // I don't know what it Enumeration. Could you explain about it?
 	    
 	    
 	    

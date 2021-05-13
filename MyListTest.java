@@ -16,8 +16,16 @@ public class MyListTest {
          
 		 // display stored data using the below code .. Do not need to use MyList!
 		 Iterator<String> sampleIterator = sampleData.iterator();
+		 while (sampleIterator.hasNext()){
+			System.out.println(sampleIterator.next());
+		 }
+		 /** 
+		 * Question: At the first iterating, does sampleIterator.next() access to the first element?
+		 *   Then where was the pointer before next() ?
+		 */  
+
 		 
-		 
+		/*
 		MyList myList = new MyList();
 		MySet mySet = new MySet();
 		
@@ -42,7 +50,7 @@ public class MyListTest {
 		
 		System.out.println("Now, myList contains: " +  myList.toString()); // test MyList's remove
 		System.out.println("Now, mySet contains: " +  myList.toString()); // test MySet's remove
-		
+		*/
 	}
 }
 	
