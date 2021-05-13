@@ -18,11 +18,15 @@ public class ArrayListExample {
 
 	    //Store the sampledata into the ArrayList
 		for (int i = 0 ; i < chilDrivingSampleData.length ; i++ ){
-			 chilDrivingData.add(chilDrivingSampleData[i]);
+			 chilDrivingData.add(chilDrivingSampleData[i]);  //<-- Research more about using add method, 
 		 }
 	    
+		//First of all, you can not add the sample data to ArrayList with the above way. 
+		// iterating means that retrieve all stored data
+		
 	    // iterating all elements from the ArrayList // I don't understand the exact meaning of iterating in this context. Do you want me to print all elements?
 	    // use Iterator
+		// I put Enumeration and Collection docs within the readme.MD file
 		Iterator<String> chilDrivingDataIterator = chilDrivingData.iterator();
 
 	    // use Enumeration and Collections // I don't know what it Enumeration. Could you explain about it?
