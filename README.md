@@ -9,9 +9,6 @@ https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
 
 ![image](https://user-images.githubusercontent.com/76067750/118215770-34b33b00-b440-11eb-8d1e-b90b1c491b40.png)
 
-https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
-
-
 https://docs.oracle.com/javase/8/docs/api/java/util/Enumeration.html
 
 https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html
